@@ -6,13 +6,11 @@ import { InicioComponent } from './secciones/inicio/inicio.component';
 import { VehiculosComponent } from './secciones/vehiculos/vehiculos.component';
 
 const routes: Routes = [
-  {path: 'inicio', component: InicioComponent},
-  {path: 'vehiculos', component: VehiculosComponent},
-  {path: 'fabricantes', component: FabricantesComponent},
-  {path: '', redirectTo: '/inicio', pathMatch: 'full' },
-  {path: '**', component: Error404Component}
-
-
+  { path: '', redirectTo: '/inicio', pathMatch: 'full'},
+  { path: 'inicio', component: InicioComponent},
+  { path: 'vehiculos', component: VehiculosComponent },
+  { path: 'fabricantes', component: FabricantesComponent},
+  { path: '**', component: Error404Component}
 ];
 
 @NgModule({

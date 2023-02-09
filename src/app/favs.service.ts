@@ -19,8 +19,17 @@ export class FavsService {
       localStorage.setItem('favsCars', JSON.stringify(this.coches))
     }
   }
-
+  delFav(id:string) {
+    let posicion=this.coches.indexOf(id)
+    if (posicion>=0 || posicion<this.coches.length) {
+    this.coches.splice(posicion,1)
+    localStorage.setItem('favsCars', JSON.stringify(this.coches))
+    }
+  }
   getFavs():Array<string> {
     return this.coches
+  }
+  isFav(id:string){
+    return this.coches.includes(id)
   }
 }

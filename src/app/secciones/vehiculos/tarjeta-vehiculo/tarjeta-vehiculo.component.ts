@@ -15,4 +15,10 @@ export class TarjetaVehiculoComponent {
   addFav(id:string){
     this.favs.addFav(id)
   }
+  delFav(id:string){
+    this.favs.delFav(id)
+  }
+  isFav(id:string){
+    return this.favs.isFav(id)
+  }
 }

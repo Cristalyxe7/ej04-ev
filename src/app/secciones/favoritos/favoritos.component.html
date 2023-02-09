@@ -4,3 +4,9 @@
     {{f}}
   </li>
 </ul>
+
+<div id="listaId" class="row row-cols-4">
+  <app-tarjeta-vehiculo *ngFor="let id of getFavs()" [vehiculo]="id">
+
+  </app-tarjeta-vehiculo>
+</div>

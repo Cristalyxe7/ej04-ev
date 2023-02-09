@@ -4,14 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FavsService {
-  private coches:Array<string> = ["13","18","21"]
+  private coches:Array<string> = []
 
-  constructor() { }
+  constructor() {
+    let savedFavs = localStorage.getItem('favsCars') || "[]"
+    this.coches = JSON.parse(savedFavs)
+   }
+
+
 
   addFav(id:string) {
     if (!this.coches.includes(id)) {
       this.coches.push(id)
-      console.log(this.coches)
+      localStorage.setItem('favsCars', JSON.stringify(this.coches))
     }
   }
 

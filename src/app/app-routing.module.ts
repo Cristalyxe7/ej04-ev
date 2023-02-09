@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FavsService } from './favs.service';
 import { Error404Component } from './secciones/error404/error404.component';
 import { FabricantesComponent } from './secciones/fabricantes/fabricantes.component';
 import { FavoritosComponent } from './secciones/favoritos/favoritos.component';

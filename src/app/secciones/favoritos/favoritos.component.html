@@ -1,3 +1,6 @@
-<p>
-  favoritos works!
-</p>
+<h3>Favoritos del usuario:</h3>
+<ul>
+  <li *ngFor="let f of getFavs()">
+    {{f}}
+  </li>
+</ul>

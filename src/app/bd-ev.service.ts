@@ -83,7 +83,6 @@ export class BdEvService {
   }
 
   getCocheById(id:string) {
-    let coche = this.getVehiculos().find((coche:any) => coche.id == id)
-    return coche
+    return this.getVehiculos().find( (c:any) => c.id == id)
   }
 }

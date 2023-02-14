@@ -42,7 +42,7 @@ export class BdEvService {
   //   {id:"19",text:"Volvo",imagen:"assets/img/volvo.jpg"},
   //   {id:"20",text:"Volkswagen",imagen:"assets/img/volkswagen.jpg"}
   // ]
-
+  private tecnologias:any
   private vehiculos:any
   private fabricantes:any
   private urlBase:string = "http://localhost/DWEC/ev/search.php"
@@ -80,6 +80,17 @@ export class BdEvService {
       )
     }
     return this.fabricantes
+  }
+
+  getTecnologias():Array<any> {
+    if (!this.tecnologias) {
+      this.http.get(this.urlBaseExt + "tecnologias").subscribe(
+        (response:any) => {
+          this.tecnologias = response
+        }
+      )
+    }
+    return this.tecnologias
   }
 
   getCocheById(id:string) {
